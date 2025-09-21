@@ -1,6 +1,3 @@
-Below is the complete `README.md` file in Markdown format, designed for the root directory of your Online Book Library GitHub repository. It includes setup instructions, usage details, and placeholders for screenshots as requested. You can copy this directly into a `README.md` file in your project root and update the screenshot paths after uploading images.
-
-```markdown
 # Online Book Library
 
 Welcome to the Online Book Library, a web application built to help users discover, manage, and review books. This project allows users to search for books, add them to personal reading lists (To Be Read, Reading, Read), view their profile statistics, and more. The app is styled with a Teal Green and Gold theme for a modern and engaging user experience.
@@ -122,4 +119,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - Inspired by open-source book management projects.
 
 ```
+
 
