@@ -120,22 +120,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 - Inspired by open-source book management projects.
-- Thanks to the xAI community for support and guidance.
+
 ```
 
-### How to Use
-1. **Create/Overwrite `README.md`**:
-   - In your project root (e.g., `OnlineBookLibrary/`), create or open `README.md`.
-   - Copy and paste the content above.
-   - Save the file.
-
-2. **Add Screenshots**:
-   - Follow the instructions in the "Screenshots" section to create a `screenshots` folder and upload images.
-   - Update the image paths in the README with the actual file names after uploading (e.g., replace `screenshots/homepage.png` with the correct path).
-
-3. **Commit and Push**:
-   ```bash
-   git add README.md
-   git commit -m "Update README with full documentation and screenshot placeholders"
-   git push origin main
-   ```
