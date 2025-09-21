@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { FaStar, FaTimes } from 'react-icons/fa';
 import { MdBook } from 'react-icons/md';
-import { MdSearch } from 'react-icons/md';
 import useAuth from '../hooks/useAuth';
 
 const BookDetailsModal = ({ book, isOpen, onClose }) => {

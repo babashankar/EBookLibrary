@@ -13,8 +13,7 @@ const BookshelfPage = () => {
   const [error, setError] = useState('');
   const [selectedBook, setSelectedBook] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const { user } = useAuth();
-
+  
   useEffect(() => {
     const loadRandomBooks = async () => {
       try {
