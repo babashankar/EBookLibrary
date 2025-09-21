@@ -118,6 +118,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 - Inspired by open-source book management projects.
 
-```
 
 
