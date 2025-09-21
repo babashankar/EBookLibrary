@@ -79,7 +79,7 @@ const MyBooksPage = () => {
       </button>
       <button
         onClick={() => removeBook(book)}
-        className="bg-gold-500 text-teal-700 p-2 rounded-full hover:bg-gold-600 transition-colors"
+        className="bg-gold-500 text-teal-700 p-2 rounded-full hover:bg-red-500 transition-colors"
       >
         Remove
       </button>

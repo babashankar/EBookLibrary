@@ -11,16 +11,18 @@ import RegisterPage from './pages/RegisterPage';
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-100">
+      <div className="flex flex-col min-h-screen bg-gray-100">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/bookshelf" element={<BookshelfPage />} />
-          <Route path="/mybooks" element={<MyBooksPage />} />
-          <Route path="/about" element={<AboutPage />} />
-          <Route path="/login" element={<LoginPage />} />
-          <Route path="/register" element={<RegisterPage />} />
-        </Routes>
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/bookshelf" element={<BookshelfPage />} />
+            <Route path="/mybooks" element={<MyBooksPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/login" element={<LoginPage />} />
+            <Route path="/register" element={<RegisterPage />} />
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>

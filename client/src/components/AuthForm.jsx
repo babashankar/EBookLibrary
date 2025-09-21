@@ -36,8 +36,8 @@ const AuthForm = ({ isRegister = false }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-teal-800 p-6 rounded-lg shadow-lg text-white">
-      {error && <p className="text-salmon-500 mb-4">{error}</p>}
+    <form onSubmit={handleSubmit} className="bg-teal-800 p-6 rounded-lg shadow-lg text-gold-200">
+      {error && <p className="text-gold-500 mb-4">{error}</p>}
       {isRegister && (
         <>
           <input
@@ -45,14 +45,14 @@ const AuthForm = ({ isRegister = false }) => {
             placeholder="Username"
             value={formData.username}
             onChange={handleChange}
-            className="mb-2 p-2 border border-teal-600 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-salmon-500"
+            className="mb-2 p-2 border border-teal-600 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700"
             required={isRegister}
           />
           <select
             name="userType"
             value={formData.userType}
             onChange={handleChange}
-            className="mb-2 p-2 border border-teal-600 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-salmon-500"
+            className="mb-2 p-2 border border-teal-600 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700"
           >
             <option value="student">Student</option>
             <option value="teacher">Teacher</option>
@@ -65,7 +65,7 @@ const AuthForm = ({ isRegister = false }) => {
         placeholder="Email"
         value={formData.email}
         onChange={handleChange}
-        className="mb-2 p-2 border border-teal-600 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-salmon-500"
+        className="mb-2 p-2 border text-gold-500 border-teal-600 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700"
         required
       />
       <input
@@ -74,7 +74,7 @@ const AuthForm = ({ isRegister = false }) => {
         placeholder="Password"
         value={formData.password}
         onChange={handleChange}
-        className="mb-2 p-2 border border-teal-600 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-salmon-500"
+        className="mb-2 p-2 border border-teal-600 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700"
         required
       />
       {isRegister && (
@@ -84,13 +84,13 @@ const AuthForm = ({ isRegister = false }) => {
           placeholder="Confirm Password"
           value={formData.confirmPassword}
           onChange={handleChange}
-          className="mb-2 p-2 border border-teal-600 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-salmon-500"
+          className="mb-2 p-2 border border-teal-600 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700"
           required
         />
       )}
       <button
         type="submit"
-        className="w-full bg-salmon-500 text-white px-4 py-2 rounded-lg hover:bg-salmon-600 transition-colors mt-4"
+        className="w-full bg-gold-200 text-white px-4 py-2 rounded-lg hover:bg-gold-600 transition-colors mt-4"
       >
         {isRegister ? 'Register' : 'Login'}
       </button>

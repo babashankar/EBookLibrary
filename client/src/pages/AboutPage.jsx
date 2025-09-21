@@ -69,7 +69,7 @@ const AboutPage = () => {
             alt="Profile"
             className="w-40 h-40 rounded-full border-0.5 border-black shadow-md"
           />
-          <div className="absolute bottom-0 right-0 bg-salmon-500 text-white rounded-full p-2">
+          <div className="absolute bottom-0 right-0 bg-gold-500 text-white rounded-full p-2">
             <MdPerson className="text-xl" />
           </div>
         </div>

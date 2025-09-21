@@ -64,13 +64,13 @@ const BookshelfPage = () => {
             placeholder="Search books by name..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full p-3 pl-10 border border-teal-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-salmon-500"
+            className="w-full p-3 pl-10 border border-teal-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-700"
           />
           <MdSearch className="absolute left-3 top-3 text-teal-600" />
         </div>
         <button
           onClick={handleSearch}
-          className="ml-4 bg-teal-700 text-gold-600 py-3 px-6 rounded-lg hover:bg-salmon-600 transition-colors disabled:opacity-50"
+          className="ml-4 bg-teal-700 text-gold-600 py-3 px-6 rounded-lg hover:bg-teal-600 transition-colors disabled:opacity-50"
           disabled={loading}
         >
           {loading ? 'Searching...' : 'Search'}
