@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import BookCard from '../components/BookCard';
-import { FaPlus, FaEdit, FaTrash } from 'react-icons/fa';
+import { FaPlus } from 'react-icons/fa';
 import useAuth from '../hooks/useAuth';
 
 const MyBooksPage = () => {
@@ -51,35 +51,35 @@ const MyBooksPage = () => {
   }
 
   const EmptyState = () => (
-    <div className="flex flex-col items-center justify-center h-40 bg-teal-600 border-2 border-dashed border-teal-600 rounded-xl">
-      <FaPlus className="text-4xl text-gold-600 mb-2" />
-      <p className="text-gold-600 font-medium">Add Books</p>
+    <div className="flex flex-col items-center justify-center h-40 bg-teal-100 border-2 border-dashed border-teal-600 rounded-lg">
+      <FaPlus className="text-2xl sm:text-3xl text-teal-600 mb-2" />
+      <p className="text-teal-800 font-medium text-sm sm:text-base">Add Books</p>
     </div>
   );
 
   const BookActionButtons = ({ book }) => (
-    <div className="flex space-x-2 mt-3">
+    <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 mt-3">
       <button
         onClick={() => updateBookStatus(book, 'tbr')}
-        className="bg-gold-500 text-teal-700 p-2 rounded-full hover:bg-gold-600 transition-colors"
+        className="bg-gold-500 text-white p-2 rounded-full hover:bg-gold-600 transition-colors text-sm"
       >
         To Be Read
       </button>
       <button
         onClick={() => updateBookStatus(book, 'reading')}
-        className="bg-gold-500 text-teal-700 p-2 rounded-full hover:bg-gold-600 transition-colors"
+        className="bg-gold-500 text-white p-2 rounded-full hover:bg-gold-600 transition-colors text-sm"
       >
         Reading
       </button>
       <button
         onClick={() => updateBookStatus(book, 'read')}
-        className="bg-gold-500 text-teal-700 p-2 rounded-full hover:bg-gold-600 transition-colors"
+        className="bg-gold-500 text-white p-2 rounded-full hover:bg-gold-600 transition-colors text-sm"
       >
         Read
       </button>
       <button
         onClick={() => removeBook(book)}
-        className="bg-gold-500 text-teal-700 p-2 rounded-full hover:bg-red-500 transition-colors"
+        className="bg-teal-600 text-white p-2 rounded-full hover:bg-teal-700 transition-colors text-sm"
       >
         Remove
       </button>
@@ -87,10 +87,10 @@ const MyBooksPage = () => {
   );
 
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-4xl font-bold text-teal-800 mb-6">My Book Collection</h1>
-      <h2 className="text-3xl font-bold text-teal-700 mb-4">To Be Read</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+    <div className="container mx-auto p-4 pb-16">
+      <h1 className="text-3xl sm:text-4xl font-bold text-teal-800 mb-6">My Book Collection</h1>
+      <h2 className="text-xl sm:text-2xl text-teal-700 mb-4">To Be Read</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-6">
         {tbr.length > 0 ? (
           tbr.map(book => (
             <div key={book.googleBooksId} className="relative">
@@ -102,8 +102,8 @@ const MyBooksPage = () => {
           <EmptyState />
         )}
       </div>
-      <h2 className="text-3xl font-bold text-teal-700 mb-4">Reading</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+      <h2 className="text-xl sm:text-2xl text-teal-700 mb-4">Reading</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-6">
         {reading.length > 0 ? (
           reading.map(book => (
             <div key={book.googleBooksId} className="relative">
@@ -115,8 +115,8 @@ const MyBooksPage = () => {
           <EmptyState />
         )}
       </div>
-      <h2 className="text-3xl font-bold text-teal-700 mb-4">Read</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <h2 className="text-xl sm:text-2xl text-teal-700 mb-4">Read</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {read.length > 0 ? (
           read.map(book => (
             <div key={book.googleBooksId} className="relative">

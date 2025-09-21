@@ -1,6 +1,5 @@
 import { FaStar } from 'react-icons/fa';
 import { MdFavoriteBorder } from 'react-icons/md';
-
 const BookCard = ({ book, onClick, buttonText }) => {
   const handleCardClick = (e) => {
     if (onClick) {
@@ -10,36 +9,36 @@ const BookCard = ({ book, onClick, buttonText }) => {
 
   return (
     <div
-      className="bg-gradient-to-br from-teal-700 to-teal-800 text-white shadow-lg rounded-xl p-4 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer border border-teal-600 relative overflow-hidden"
+      className="bg-gradient-to-br from-teal-700 to-teal-800 text-white shadow-lg rounded-xl p-2 sm:p-4 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer border border-teal-600 relative overflow-hidden"
       onClick={handleCardClick}
     >
-      <div className="absolute inset-0 bg-gold-200/500 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
+      <div className="absolute inset-0 bg-gold-500/20 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-xl"></div>
       <div className="relative">
         <img
           src={book.coverImage}
           alt={book.title}
-          className="w-full h-56 object-cover rounded-lg"
+          className="w-full h-32 sm:h-48 object-cover rounded-lg"
           onError={(e) => { e.target.src = 'https://placehold.co/200x300'; }}
         />
-        <div className="absolute top-2 right-2 bg-gold-200 text-white rounded-full p-1">
-          <MdFavoriteBorder className="text-lg" />
+        <div className="absolute top-1 sm:top-2 right-1 sm:right-2 bg-gold-500 text-white rounded-full p-1 sm:p-2">
+          <MdFavoriteBorder className="text-sm sm:text-lg" />
         </div>
       </div>
-      <h3 className="text-xl font-semibold mt-3 truncate">{book.title}</h3>
-      <p className="text-gray-200 text-sm mt-1">{book.author}</p>
-      <div className="flex items-center mt-2">
-        <FaStar className="text-gold-200 mr-1" />
-        <span className="text-gray-100">{book.averageRating ? `${book.averageRating}/5` : 'N/A'}</span>
+      <h3 className="text-base sm:text-lg font-semibold mt-2 sm:mt-3 truncate">{book.title}</h3>
+      <p className="text-xs sm:text-sm text-gray-200 mt-1">{book.author}</p>
+      <div className="flex items-center mt-1 sm:mt-2">
+        <FaStar className="text-gold-500 text-xs sm:text-sm mr-1" />
+        <span className="text-gray-100 text-xs sm:text-sm">{book.averageRating ? `${book.averageRating}/5` : 'N/A'}</span>
       </div>
-      <p className="text-xs text-gray-300 mt-1">ISBN: {book.isbn}</p>
+      <p className="text-xs sm:text-sm text-gray-300 mt-1">ISBN: {book.isbn}</p>
       {buttonText && (
         <button
           onClick={(e) => e.stopPropagation()}
-          className="mt-3 w-full bg-gold-500 text-white py-2 rounded-lg hover:bg-salmon-600 transition-colors"
+          className="mt-2 w-full bg-gold-500 text-white py-1 sm:py-2 rounded-lg hover:bg-gold-600 transition-colors text-xs sm:text-sm"
         >
           {buttonText}
         </button>
-      )}
+        )}
     </div>
   );
 };

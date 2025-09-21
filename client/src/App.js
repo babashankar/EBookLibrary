@@ -1,32 +1,32 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar.jsx';
-import Footer from './components/Footer';
-import HomePage from './pages/HomePage';
-import BookshelfPage from './pages/BookshelfPage';
-import MyBooksPage from './pages/MyBooksPage';
-import AboutPage from './pages/AboutPage';
-import LoginPage from './pages/LoginPage';
-import RegisterPage from './pages/RegisterPage';
+  import Navbar from './components/Navbar.jsx';
+  import Footer from './components/Footer';
+  import HomePage from './pages/HomePage';
+  import BookshelfPage from './pages/BookshelfPage';
+  import MyBooksPage from './pages/MyBooksPage';
+  import AboutPage from './pages/AboutPage';
+  import LoginPage from './pages/LoginPage';
+  import RegisterPage from './pages/RegisterPage';
 
-function App() {
-  return (
-    <Router>
-      <div className="flex flex-col min-h-screen bg-gray-100">
-        <Navbar />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/bookshelf" element={<BookshelfPage />} />
-            <Route path="/mybooks" element={<MyBooksPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/register" element={<RegisterPage />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  );
-}
+  function App() {
+    return (
+      <Router>
+        <div className="flex flex-col min-h-screen bg-gray-100">
+          <Navbar />
+          <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/bookshelf" element={<BookshelfPage />} />
+              <Route path="/mybooks" element={<MyBooksPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/register" element={<RegisterPage />} />
+            </Routes>
+          </main>
+          <Footer />
+        </div>
+      </Router>
+    );
+  }
 
-export default App;
+  export default App;
