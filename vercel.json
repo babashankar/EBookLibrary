@@ -16,19 +16,24 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "server/server.js"
+      "dest": "/server/server.js"
     },
     {
       "src": "/uploads/(.*)",
-      "dest": "server/server.js"
-    },
-    {
-      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|map))",
-      "dest": "client/build/$1"
+      "dest": "/server/server.js"
     },
     {
       "src": "/(.*)",
-      "dest": "client/build/index.html"
+      "dest": "/client/build/$1"
     }
-  ]
+  ],
+  "outputDirectory": "client/build",
+  "installCommand": "cd client && npm install && cd ../server && npm install",
+  "buildCommand": "cd client && npm run build",
+  "functions": {
+    "server/server.js": {
+      "maxDuration": 30
+    }
+  }
 }
+
