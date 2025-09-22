@@ -4,13 +4,14 @@
     {
       "src": "client/package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": "client/build" }
+      "config": {
+        "distDir": "build"
+      }
     },
     {
       "src": "server/server.js",
       "use": "@vercel/node"
-    },
-    { "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+    }
   ],
   "routes": [
     {
@@ -18,11 +19,11 @@
       "dest": "server/server.js"
     },
     {
-      "src": "/static/(.*)",
-      "dest": "client/build/static/$1"
+      "src": "/uploads/(.*)",
+      "dest": "server/server.js"
     },
     {
-      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot))",
+      "src": "/(.*\\.(js|css|ico|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|map))",
       "dest": "client/build/$1"
     },
     {
